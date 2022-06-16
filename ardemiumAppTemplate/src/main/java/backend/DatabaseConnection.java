@@ -14,7 +14,7 @@ public class DatabaseConnection {
     public ArrayList<User> getUserdb() throws FileNotFoundException {
         ArrayList<User> output = new ArrayList<>();
         Gson gson = new Gson();
-        FileReader fileReader = new FileReader("src/main/resources/gsondb/userdb.JSON");
+        FileReader fileReader = new FileReader("ardemiumAppTemplate/src/main/resources/gsondb/userdb.json");
         JsonArray userdb = gson.fromJson(fileReader, JsonArray.class);
         for (JsonElement o :
                 userdb) {
@@ -24,7 +24,7 @@ public class DatabaseConnection {
     }
 
     public void setUserdb(ArrayList<User> userdb) throws IOException {
-        FileWriter fileWriter = new FileWriter("src/main/resources/gsondb/userdb.JSON");
+        FileWriter fileWriter = new FileWriter("ardemiumAppTemplate/src/main/resources/gsondb/userdb.json");
         for (int i = 0; i < userdb.size(); i++) {
             userdb.get(i).USERID = i;
         }
