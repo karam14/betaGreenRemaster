@@ -39,7 +39,7 @@ public class HelloController {
         } else if (response[0] == 1) {
             SessionUser sessionUser = SessionUser.getInstance();
             Admin admin = new Admin(databaseConnection.getUser(response));
-            sessionUser.setUser(admin);
+            sessionUser.setAdmin(admin);
             HelloApplication.changeScreen(actionEvent,"admin-view.fxml");
         }
     }
