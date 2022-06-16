@@ -1,15 +1,19 @@
 package backend;
 
+import java.io.IOException;
+
 public abstract class MeansOfTransport {
-    public int getUistoot(String start, String eind) {
-        setStartPunt(start);
-        setEindPunt(eind);
+
+    String start;
+    String eind;
+    String medium;
+
+    public int getUistoot(String start, String eind, String medium) throws IOException {
+        this.start = start;
+        this.eind = eind;
+        this.medium = medium;
         return coTwee();
     }
 
-    public abstract void setStartPunt(String start);
-
-    public abstract void setEindPunt(String eind);
-
-    public abstract int coTwee();
+    public abstract int coTwee() throws IOException;
 }

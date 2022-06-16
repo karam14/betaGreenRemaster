@@ -3,6 +3,7 @@ module nl.ardemium.ardemiumapptemplate {
     requires javafx.fxml;
 
     requires com.google.gson;
+    requires java.ws.rs;
 
 
     opens nl.ardemium.ardemiumapptemplate to javafx.fxml;
