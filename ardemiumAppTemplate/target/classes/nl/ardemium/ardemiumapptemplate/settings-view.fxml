@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nl.ardemium.ardemiumapptemplate.SettingsController">
+   <children>
+      <Label layoutX="147.0" layoutY="14.0" text="Settings" />
+      <Label layoutX="93.0" layoutY="172.0" text="Name" />
+      <Label layoutX="93.0" layoutY="216.0" text="Email" />
+      <Label layoutX="93.0" layoutY="260.0" text="Phone" />
+      <Label layoutX="93.0" layoutY="304.0" text="Password" />
+      <Label layoutX="93.0" layoutY="348.0" text="Confirm Password" />
+      <TextField fx:id="textFieldName" layoutX="92.0" layoutY="190.0" />
+      <TextField fx:id="textFieldEmail" layoutX="92.0" layoutY="234.0" />
+      <TextField fx:id="textFieldPhone" layoutX="92.0" layoutY="274.0" />
+      <PasswordField fx:id="textFieldPassword" layoutX="92.0" layoutY="322.0" />
+      <PasswordField fx:id="textFieldConfirmPassword" layoutX="94.0" layoutY="366.0" />
+      <Button layoutX="269.0" layoutY="561.0" mnemonicParsing="false" onAction="#onButtonBack" text="Back" />
+      <Button layoutX="246.0" layoutY="191.0" mnemonicParsing="false" onAction="#onButtonChangeName" text="Change" />
+      <Button layoutX="246.0" layoutY="232.0" mnemonicParsing="false" onAction="#onButtonChangeEmail" text="Change" />
+      <Button layoutX="247.0" layoutY="275.0" mnemonicParsing="false" onAction="#onButtonChangePhone" text="Change" />
+      <Button layoutX="248.0" layoutY="367.0" mnemonicParsing="false" onAction="#onButtonChangePassword" text="Change" />
+   </children>
+</AnchorPane>

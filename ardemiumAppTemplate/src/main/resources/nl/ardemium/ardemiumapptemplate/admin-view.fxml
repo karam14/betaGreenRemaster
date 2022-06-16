@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nl.ardemium.ardemiumapptemplate.AdminController">
+   <children>
+      <Label fx:id="labelTest" layoutX="154.0" layoutY="292.0" />
+      <Button layoutX="269.0" layoutY="14.0" mnemonicParsing="false" onAction="#onButtonLogout" text="Logout" />
+      <Button layoutX="14.0" layoutY="561.0" mnemonicParsing="false" onAction="#onButtonSettings" text="Settings" />
+      <Button layoutX="76.0" layoutY="561.0" mnemonicParsing="false" onAction="#onButtonManageUsers" text="Manage Users" />
+   </children>
+</AnchorPane>
