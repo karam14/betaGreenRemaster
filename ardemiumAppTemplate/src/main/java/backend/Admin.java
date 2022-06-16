@@ -7,7 +7,7 @@ public class Admin extends User {
     public ArrayList<User>employees;
     public ArrayList<Quote>quotes;
     public ArrayList<Reward>allRewards;
-    public DatabaseConnection dc = new DatabaseConnection();
+     DatabaseConnection dc = new DatabaseConnection();
     public Admin(User u) throws FileNotFoundException {
         super(u.USERID, u.email, u.password, u.name, u.phone);
         this.employees = initEmployees();
@@ -16,7 +16,7 @@ public class Admin extends User {
     }
 
     public ArrayList<User> initEmployees() throws FileNotFoundException {
-        return dc.getUserdb();
+              return dc.getUserdb();
     }
 
     public ArrayList<Reward> initAllRewards() throws FileNotFoundException {
@@ -29,4 +29,7 @@ public class Admin extends User {
     }
 
 
+    public ArrayList<User> getEmployees() {
+        return employees;
+    }
 }

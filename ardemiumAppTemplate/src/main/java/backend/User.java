@@ -9,9 +9,9 @@ public class User {
     public String password;
     public String name;
     public String phone;
-    public ArrayList<MeansOfTransport>meansOfTransport;
+//    public ArrayList<MeansOfTransport>meansOfTransport;
     //    public ArrayList<Ride> rides;
-    public DatabaseConnection dc;
+
 
     public User(int USERID, String email, String password, String name, String phone) {
         this.email = email;
@@ -22,7 +22,7 @@ public class User {
 //        this.meansOfTransport = initMeansOfTransport();
 //        this.rides = initMeansOfRides();
     }
-
+//
 //    private ArrayList<MeansOfTransport> initMeansOfTransport() {
 //    }
 //
