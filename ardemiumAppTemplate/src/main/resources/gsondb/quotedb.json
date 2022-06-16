@@ -1,0 +1,16 @@
+[
+  {
+    "QUOTEID": 0,
+    "tip": "bla bla bla 1",
+    "quote": "bla bla bla 1 + 1"
+  },  {
+    "QUOTEID": 2,
+    "tip": "bla bla bla 2",
+    "quote": "bla bla bla 2 + 2"
+  },  {
+    "QUOTEID": 3,
+    "tip": "bla bla bla 3",
+    "quote": "bla bla bla 3 + 3"
+  }
+
+]
