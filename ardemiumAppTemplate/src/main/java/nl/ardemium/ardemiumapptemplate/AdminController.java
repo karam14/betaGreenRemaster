@@ -15,8 +15,8 @@ public class AdminController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        SessionUser.getInstance().getUser().admin = true;
-        labelTest.setText("A deity or a god\n is a supernatural being\n who is considered\n divine or sacred or " + SessionUser.getInstance().getUser().name);
+        SessionUser.getInstance().getAdmin().admin = true;
+        labelTest.setText("A deity or a god\n is a supernatural being\n who is considered\n divine or sacred or " + SessionUser.getInstance().getAdmin().name);
     }
 
     @javafx.fxml.FXML

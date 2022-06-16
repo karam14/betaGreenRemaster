@@ -92,5 +92,28 @@ public class DatabaseConnection {
         }
         setUserdb(userdb);
     }
+    public ArrayList<Reward> getRewarddb() throws FileNotFoundException {
+        ArrayList<Reward> output = new ArrayList<>();
+        Gson gson = new Gson();
+        FileReader fileReader = new FileReader("src/main/resources/gsondb/rewarddb.json");
+        JsonArray rewarddb = gson.fromJson(fileReader, JsonArray.class);
+        for (JsonElement o :
+                rewarddb) {
+            output.add(gson.fromJson(o, Reward.class));
+        }
+        return output;
+    }
+
+    public ArrayList<Quote> getQuotesdb() throws FileNotFoundException {
+        ArrayList<Quote> output = new ArrayList<>();
+        Gson gson = new Gson();
+        FileReader fileReader = new FileReader("src/main/resources/gsondb/quotedb.json");
+        JsonArray rewarddb = gson.fromJson(fileReader, JsonArray.class);
+        for (JsonElement o :
+                rewarddb) {
+            output.add(gson.fromJson(o, Quote.class));
+        }
+        return output;
+    }
 
 }

@@ -1,5 +1,6 @@
 package nl.ardemium.ardemiumapptemplate;
 
+import backend.Admin;
 import backend.DatabaseConnection;
 import backend.SessionUser;
 import backend.User;
@@ -18,7 +19,7 @@ import java.util.ResourceBundle;
 
 public class ManageController implements Initializable {
     DatabaseConnection databaseConnection = new DatabaseConnection();
-    ArrayList<User> userdb = null;
+    ArrayList<User> userdb = SessionUser.getInstance().getAdmin().getEmployees();
     User selected = null;
 
     @javafx.fxml.FXML
