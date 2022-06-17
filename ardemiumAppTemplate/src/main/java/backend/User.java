@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class User {
     public int USERID;
-    public boolean admin = false;
+    public boolean admin;
     public String email;
     public String password;
     public String name;
@@ -15,8 +15,9 @@ public class User {
     //    public ArrayList<Ride> rides;
 
 
-    public User(int USERID, String email, String password, String name, String phone,int points, Integer[] goals) {
+    public User(int USERID, boolean admin, String email, String password, String name, String phone,int points, Integer[] goals) {
         this.email = email;
+        this.admin = admin;
         this.password = password;
         this.name = name;
         this.phone = phone;
@@ -40,5 +41,13 @@ public class User {
                 ", email='" + email + '\'' +
                 ", name='" + name + '\'' +
                 ", phone='" + phone;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getName() {
+        return name;
     }
 }

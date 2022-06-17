@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="512.0" prefWidth="288.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nl.ardemium.ardemiumapptemplate.HomeAdminController">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="512.0" prefWidth="288.0" style="-fx-background-color: grey;">
+         <children>
+            <ScrollPane hbarPolicy="NEVER" layoutX="-1.0" layoutY="-2.0" prefHeight="512.0" prefWidth="312.0" style="-fx-background-color: #FCFBFE;" vbarPolicy="ALWAYS">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="702.0" prefWidth="288.0" style="-fx-background-color: #F3F3FF;">
+                     <children>
+                        <Button fx:id="settings" contentDisplay="TOP" layoutX="9.0" layoutY="202.0" mnemonicParsing="false" onAction="#onSettingsButton" prefHeight="131.0" prefWidth="139.0" stylesheets="@style.css" text="Settings" textFill="DARKGRAY">
+                           <styleClass>
+                              <String fx:value="roundPane" />
+                              <String fx:value="shadow" />
+                              <String fx:value="tile" />
+                           </styleClass>
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="87.0" fitWidth="90.0">
+                                 <image>
+                                    <Image url="@images/icons/Settings icon Neww.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="editAccount" contentDisplay="TOP" layoutX="11.0" layoutY="59.0" mnemonicParsing="false" onAction="#onEditAccountButton" prefHeight="126.0" prefWidth="131.0" stylesheets="@style.css" text="Edit Account" textFill="DARKGRAY">
+                           <styleClass>
+                              <String fx:value="roundPane" />
+                              <String fx:value="shadow" />
+                              <String fx:value="tile" />
+                           </styleClass>
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fx:id="plus" fitHeight="91.0" fitWidth="94.0">
+                                 <image>
+                                    <Image url="@images/icons/Plus Icon Neww.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="signOutButton" layoutX="252.0" layoutY="1.0" mnemonicParsing="false" onAction="#onSignOutButtonAction" prefHeight="27.0" prefWidth="14.0" stylesheets="@style.css">
+                           <graphic>
+                              <FontAwesomeIconView fill="#b4b4b4" glyphName="POWER_OFF" size="19" styleClass="power" />
+                           </graphic>
+                        </Button>
+                        <Button fx:id="scoreBoard" contentDisplay="TOP" layoutX="153.0" layoutY="64.0" mnemonicParsing="false" onAction="#onScoreBoardButton" prefHeight="117.0" prefWidth="134.0" stylesheets="@style.css" text="Scoreboard" textFill="DARKGRAY">
+                           <styleClass>
+                              <String fx:value="roundPane" />
+                              <String fx:value="shadow" />
+                              <String fx:value="tile" />
+                           </styleClass>
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="90.0" fitWidth="83.0">
+                                 <image>
+                                    <Image url="@images/icons/Trophy Icon New.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

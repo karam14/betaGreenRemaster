@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="512.0" prefWidth="288.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nl.ardemium.ardemiumapptemplate.editAccountTabelController">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="512.0" prefWidth="288.0" style="-fx-background-color: grey;">
+         <children>
+            <ScrollPane hbarPolicy="NEVER" layoutX="-1.0" layoutY="-2.0" prefHeight="512.0" prefWidth="312.0" style="-fx-background-color: #FCFBFE;" vbarPolicy="ALWAYS">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="702.0" prefWidth="288.0" style="-fx-background-color: #F3F3FF;">
+                     <children>
+                        <Label layoutX="123.0" layoutY="19.0" prefHeight="18.0" prefWidth="53.0" text="Overzicht " />
+                        <TableView fx:id="overzichtTabel" layoutX="16.0" layoutY="65.0" prefHeight="572.0" prefWidth="266.0">
+                          <columns>
+                            <TableColumn fx:id="naamCol" prefWidth="135.20000457763672" text="Naam" />
+                            <TableColumn fx:id="nummerCol" prefWidth="128.80001831054688" text="Nummer" />
+                          </columns>
+                        </TableView>
+                        <Button layoutX="17.0" layoutY="15.0" mnemonicParsing="false" onAction="#onEditButton" text="edit" />
+                        <Button fx:id="returnButton" layoutX="237.0" layoutY="5.0" mnemonicParsing="false" onAction="#onReturnButton" prefHeight="46.0" prefWidth="18.0" stylesheets="@style.css">
+                           <styleClass>
+                              <String fx:value="round" />
+                              <String fx:value="shop-btn" />
+                           </styleClass>
+                           <graphic>
+                              <ImageView fitHeight="32.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/icons/return.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

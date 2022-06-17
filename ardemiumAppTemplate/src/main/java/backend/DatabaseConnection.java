@@ -32,9 +32,9 @@ public class DatabaseConnection {
         fileWriter.close();
     }
 
-    public void saveUser(String email, String password, String name, String phone, int points, Integer[] goals) throws IOException {
+    public void saveUser(String email,boolean admin, String password, String name, String phone, int points, Integer[] goals) throws IOException {
         ArrayList<User> userdb = getUserdb();
-        User user = new User(userdb.size(), email, password, name, phone,points, goals);
+        User user = new User(userdb.size(), admin,email, password, name, phone,points, goals);
         userdb.add(user);
         setUserdb(userdb);
     }

@@ -9,7 +9,7 @@ public class Admin extends User {
     public ArrayList<Reward>allRewards;
      DatabaseConnection dc = new DatabaseConnection();
     public Admin(User u) throws FileNotFoundException {
-        super(u.USERID, u.email, u.password, u.name, u.phone,u.points,u.goals);
+        super(u.USERID, u.admin,u.email, u.password, u.name, u.phone,u.points,u.goals);
         this.employees = initEmployees();
         this.quotes = initQuotes();
         this.allRewards = initAllRewards();

@@ -45,7 +45,7 @@ public class HelloController {
             SessionUser sessionUser = SessionUser.getInstance();
             Admin admin = new Admin(databaseConnection.getUser(response));
             sessionUser.setAdmin(admin);
-            HelloApplication.changeScreen(actionEvent,"admin-view.fxml");
+            HelloApplication.changeScreen(actionEvent,"homeAdmin-view.fxml");
         }
     }
 }

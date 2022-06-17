@@ -40,7 +40,7 @@ public class SignupController {
                 System.out.println("Email excists");
             }
             else if (password.getText().equals(confirmPassword.getText())) {
-                databaseConnection.saveUser(email.getText(), password.getText(), fullName.getText(), phone.getText(),0,new Integer[0]);
+                databaseConnection.saveUser(email.getText(),false, password.getText(), fullName.getText(), phone.getText(),0,new Integer[0]);
             }
             else {
                 System.out.println("password not equals");

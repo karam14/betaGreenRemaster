@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="512.0" prefWidth="288.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nl.ardemium.ardemiumapptemplate.editAccountController">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="512.0" prefWidth="288.0" style="-fx-background-color: grey;">
+         <children>
+            <ScrollPane hbarPolicy="NEVER" layoutX="-1.0" layoutY="-2.0" prefHeight="512.0" prefWidth="312.0" style="-fx-background-color: #FCFBFE;" vbarPolicy="ALWAYS">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="702.0" prefWidth="288.0" style="-fx-background-color: #F3F3FF;">
+                     <children>
+                        <Label layoutX="92.0" layoutY="38.0" prefHeight="18.0" prefWidth="118.0" text="Gegevens Wijzigen" />
+                        <TextField fx:id="Name" layoutX="143.0" layoutY="84.0" prefHeight="26.0" prefWidth="134.0" />
+                        <TextField fx:id="huidugeWachtwoord" layoutX="143.0" layoutY="130.0" prefHeight="26.0" prefWidth="134.0" />
+                        <TextField fx:id="HuidigeEmail" layoutX="144.0" layoutY="181.0" prefHeight="26.0" prefWidth="134.0" />
+                        <TextField fx:id="phone" layoutX="143.0" layoutY="226.0" prefHeight="26.0" prefWidth="134.0" />
+                        <TextField fx:id="points" layoutX="143.0" layoutY="272.0" prefHeight="26.0" prefWidth="134.0" />
+                        <Button layoutX="167.0" layoutY="409.0" mnemonicParsing="false" onAction="#onWijzigenButton" prefWidth="64.0" styleClass="toggle-btn" stylesheets="@style.css" text="Wijzigen" />
+                        <Button fx:id="terugBtn" layoutX="70.0" layoutY="409.0" mnemonicParsing="false" onAction="#onTerugButton" styleClass="toggle-btn" stylesheets="@style.css" text="Terug" />
+                        <Label layoutX="92.0" layoutY="88.0" text="Name:" />
+                        <Label layoutX="12.0" layoutY="134.0" text="Huidige Wachtwoord:" />
+                        <Label layoutX="15.0" layoutY="185.0" text="Huidige E-mailadres:" />
+                        <Label layoutX="84.0" layoutY="230.0" text="Phone:" />
+                        <Label layoutX="84.0" layoutY="277.0" text="Points:" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
