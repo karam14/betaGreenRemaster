@@ -59,6 +59,37 @@
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>de.jensd</groupId>
+            <artifactId>fontawesomefx-controls</artifactId>
+            <version>9.1.2</version>
+        </dependency>
+        <dependency>
+            <groupId>com.gluonhq.attach</groupId>
+            <artifactId>util</artifactId>
+            <version>4.0.14</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.gluonhq</groupId>
+            <artifactId>charm-glisten</artifactId>
+            <version>6.1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>de.jensd</groupId>
+            <artifactId>fontawesomefx</artifactId>
+            <version>8.9</version>
+        </dependency>
+        <dependency>
+            <groupId>de.jensd</groupId>
+            <artifactId>fontawesomefx-commons</artifactId>
+            <version>9.1.2</version>
+        </dependency>
+        <dependency>
+            <groupId>de.jensd</groupId>
+            <artifactId>fontawesomefx-fontawesome</artifactId>
+            <version>4.7.0-9.1.2</version>
+        </dependency>
     </dependencies>
     <build>
         <plugins>
@@ -95,4 +126,10 @@
             </plugin>
         </plugins>
     </build>
+    <repositories>
+        <repository>
+            <id>gluon-nexus-repository</id>
+            <url>http://nexus.gluonhq.com/nexus/content/repositories/releases/</url>
+        </repository>
+    </repositories>
 </project>

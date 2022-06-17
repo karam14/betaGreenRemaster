@@ -1,9 +1,9 @@
 package backend;
 
 public class Reward {
-    final String REWARDID;
-    private String rewardName;
-    private String rewardValue;
+    public String REWARDID;
+    public String rewardName;
+    public String rewardValue;
 
     public Reward(String REWARDID, String rewardName, String rewardValue) {
         this.REWARDID = REWARDID;

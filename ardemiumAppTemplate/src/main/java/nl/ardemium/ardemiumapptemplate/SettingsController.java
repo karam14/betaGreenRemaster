@@ -4,8 +4,10 @@ import backend.DatabaseConnection;
 import backend.SessionUser;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
@@ -55,7 +57,7 @@ public class SettingsController implements Initializable {
             HelloApplication.changeScreen(actionEvent,"admin-view.fxml");
         }
         else{
-            HelloApplication.changeScreen(actionEvent,"user-view.fxml");
+            HelloApplication.changeScreen(actionEvent,"homeUser-view.fxml");
         }
     }
 
@@ -69,6 +71,7 @@ public class SettingsController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+
         textFieldName.setText(SessionUser.getInstance().getUser().name);
         textFieldEmail.setText(SessionUser.getInstance().getUser().email);
         textFieldPhone.setText(SessionUser.getInstance().getUser().phone);

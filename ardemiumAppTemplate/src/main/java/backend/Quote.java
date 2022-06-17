@@ -1,9 +1,9 @@
 package backend;
 
 public class Quote {
-    final String QUOTEID;
-    private String tip;
-    private String quote;
+    public String QUOTEID;
+    public String tip;
+    public String quote;
 
     public Quote(String QUOTEID, String tip, String quote) {
         this.QUOTEID = QUOTEID;

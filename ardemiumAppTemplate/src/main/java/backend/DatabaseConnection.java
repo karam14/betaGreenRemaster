@@ -32,9 +32,9 @@ public class DatabaseConnection {
         fileWriter.close();
     }
 
-    public void saveUser(String email, String password, String name, String phone) throws IOException {
+    public void saveUser(String email, String password, String name, String phone, int points, Integer[] goals) throws IOException {
         ArrayList<User> userdb = getUserdb();
-        User user = new User(userdb.size(), email, password, name, phone);
+        User user = new User(userdb.size(), email, password, name, phone,points, goals);
         userdb.add(user);
         setUserdb(userdb);
     }
@@ -95,7 +95,7 @@ public class DatabaseConnection {
     public ArrayList<Reward> getRewarddb() throws FileNotFoundException {
         ArrayList<Reward> output = new ArrayList<>();
         Gson gson = new Gson();
-        FileReader fileReader = new FileReader("src/main/resources/gsondb/rewarddb.json");
+        FileReader fileReader = new FileReader("ardemiumAppTemplate/src/main/resources/gsondb/rewarddb.json");
         JsonArray rewarddb = gson.fromJson(fileReader, JsonArray.class);
         for (JsonElement o :
                 rewarddb) {
@@ -107,7 +107,7 @@ public class DatabaseConnection {
     public ArrayList<Quote> getQuotesdb() throws FileNotFoundException {
         ArrayList<Quote> output = new ArrayList<>();
         Gson gson = new Gson();
-        FileReader fileReader = new FileReader("src/main/resources/gsondb/quotedb.json");
+        FileReader fileReader = new FileReader("ardemiumAppTemplate/src/main/resources/gsondb/quotedb.json");
         JsonArray rewarddb = gson.fromJson(fileReader, JsonArray.class);
         for (JsonElement o :
                 rewarddb) {

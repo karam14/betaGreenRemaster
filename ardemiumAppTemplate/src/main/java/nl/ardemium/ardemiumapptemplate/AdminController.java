@@ -22,7 +22,7 @@ public class AdminController implements Initializable {
     @javafx.fxml.FXML
     public void onButtonLogout(ActionEvent actionEvent) throws IOException {
         SessionUser.getInstance().clearUser();
-        HelloApplication.changeScreen(actionEvent,"hello-view.fxml");
+        HelloApplication.changeScreen(actionEvent,"login-view.fxml");
     }
 
     @javafx.fxml.FXML

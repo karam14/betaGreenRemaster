@@ -4,6 +4,8 @@ module nl.ardemium.ardemiumapptemplate {
 
     requires com.google.gson;
     requires java.ws.rs;
+    requires de.jensd.fx.glyphs.fontawesome;
+    requires com.gluonhq.charm.glisten;
 
 
     opens nl.ardemium.ardemiumapptemplate to javafx.fxml;

@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Hyperlink;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -15,24 +16,31 @@ import java.io.IOException;
 public class SignupController {
     DatabaseConnection databaseConnection = new DatabaseConnection();
     @javafx.fxml.FXML
-    private TextField textFieldName;
+    private PasswordField password;
     @javafx.fxml.FXML
-    private PasswordField textFieldConfirmPassword;
+    private TextField phone;
     @javafx.fxml.FXML
-    private TextField textFieldPhone;
+    private TextField fullName;
     @javafx.fxml.FXML
-    private TextField textFieldEmail;
+    private PasswordField confirmPassword;
     @javafx.fxml.FXML
-    private PasswordField textFieldPassword;
+    private TextField email;
+
 
     @javafx.fxml.FXML
-    public void onButtonSignup(ActionEvent actionEvent) {
+    public void onSignInButtonAction(ActionEvent actionEvent) throws IOException {
+        HelloApplication.changeScreen(actionEvent,"login-view.fxml");
+
+    }
+
+    @javafx.fxml.FXML
+    public void onSignUpButtonAction(ActionEvent actionEvent) {
         try {
-            if(databaseConnection.userExcist(textFieldEmail.getText())){
+            if(databaseConnection.userExcist(email.getText())){
                 System.out.println("Email excists");
             }
-            else if (textFieldPassword.getText().equals(textFieldConfirmPassword.getText())) {
-                databaseConnection.saveUser(textFieldEmail.getText(), textFieldPassword.getText(), textFieldName.getText(), textFieldPhone.getText());
+            else if (password.getText().equals(confirmPassword.getText())) {
+                databaseConnection.saveUser(email.getText(), password.getText(), fullName.getText(), phone.getText(),0,new Integer[0]);
             }
             else {
                 System.out.println("password not equals");
@@ -40,10 +48,5 @@ public class SignupController {
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
-
-    @javafx.fxml.FXML
-    public void onButtonLogin(ActionEvent actionEvent) throws IOException {
-        HelloApplication.changeScreen(actionEvent,"hello-view.fxml");
     }
 }

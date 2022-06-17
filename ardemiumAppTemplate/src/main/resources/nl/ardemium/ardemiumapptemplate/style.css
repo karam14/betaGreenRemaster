@@ -1,0 +1,124 @@
+* {
+	-fx-primary-color: #007acc;
+	-fx-secondary-color: #4B6EAF;
+	-fx-grey-color: #b9b9b9;
+	-fx-focus-color: -fx-secondary-color;
+}
+.txt{
+-fx-font-family: "Arial";
+    -fx-text-fill: linear-gradient(black, black);
+    -fx-font-size: 12px;
+
+    }
+.toggle-btn {
+    -fx-background-color: #1C75BA;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-font-family: "Arial";
+    -fx-text-fill: linear-gradient(white, #d0d0d0);
+    -fx-font-size: 12px;
+   }
+
+    .toggle-btn:hover {
+        -fx-background-color: #124E7C;
+        -fx-text-fill: white;
+        -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+        -fx-font-family: "Arial";
+        -fx-text-fill: linear-gradient(white, #d0d0d0);
+        -fx-font-size: 12px;
+     }
+
+    .toggle-btn:selected {
+    -fx-background-color: linear-gradient(to bottom, #00966e 15%, #00fc00 100%);
+
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-font-family: "Arial";
+    -fx-text-fill: linear-gradient(white, #d0d0d0);
+    -fx-font-size: 12px;
+ }
+
+    .text-field {
+    	-fx-accent: -fx-primary-color;
+    	-fx-background-color: -fx-grey-color, white;
+    	-fx-background-insets: 0, 0 0 1 0;
+    	-fx-background-radius: 0;
+    }
+    .text-field:focused {
+    	-fx-background-color: -fx-primary-color, white;
+    }
+    .loginBtn:hover {
+    -fx-background-color: #55ABD2;
+    }
+    .loginBtn:focused{
+        -fx-background-color: #55ABD2;
+    }
+    .round{
+           -fx-background-radius: 60%;
+          }
+
+    .roundPane{
+    -fx-border-radius: 30;
+    -fx-background-radius: 30;
+    }
+
+    .shadow{
+    -fx-effect:  dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+    }
+    .tile{
+     -fx-background-color: #FDFCFE;
+    }
+    .tile:hover{-fx-background-color: #D8D7D9;}
+
+
+    .power:hover{
+    fill: red;
+
+    }
+
+    .vboxscore {
+    -fx-background-color: #D3D3D3
+    }
+
+    .shadow{
+        -fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.1), 10.0 , 0.0 , 0.0 ,10.0);
+    }
+
+    .background2 {
+    -fx-background-color: #B0C1E0
+    }
+
+    .progress-bar {
+        -fx-accent: rgba(0, 138, 230, 0.85);
+    }
+
+    .progress-bar .bar {
+        -fx-padding: 1px;
+       -fx-background-insets: 2;
+        -fx-background-radius: 2;
+    }
+
+    .progress-bar > .track {
+        -fx-border-radius: 2;
+        -fx-background-radius: 2;
+    -fx-text-box-border: transparent;
+        -fx-control-inner-background: transparent;
+       /* -fx-background-color: rgba(255, 255, 255, 0.1); */
+    }
+    .shop-btn {
+        -fx-background-color: #009292;
+        -fx-text-fill: white;
+        -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+        -fx-font-family: "Arial";
+        -fx-text-fill: linear-gradient(white, #d0d0d0);
+        -fx-font-size: 12px;
+       }
+
+        .shop-btn:hover {
+            -fx-background-color: #006161;
+            -fx-text-fill: white;
+            -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+            -fx-font-family: "Arial";
+            -fx-text-fill: linear-gradient(white, #d0d0d0);
+            -fx-font-size: 12px;
+         }

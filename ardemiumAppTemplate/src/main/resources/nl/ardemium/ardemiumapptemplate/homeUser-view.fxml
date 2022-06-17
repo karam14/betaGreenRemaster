@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="512.0" prefWidth="288.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nl.ardemium.ardemiumapptemplate.HomeUserController">
+   <children>
+      <ScrollPane hbarPolicy="NEVER" layoutX="-1.0" layoutY="-2.0" prefHeight="512.0" prefWidth="312.0" style="-fx-background-color: #FCFBFE;" vbarPolicy="ALWAYS">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="702.0" prefWidth="288.0" style="-fx-background-color: #F3F3FF;">
+               <children>
+                  <GridPane layoutX="17.0" layoutY="32.0" prefHeight="129.0" prefWidth="246.0" style="-fx-background-color: #6667AB;" stylesheets="@style.css" AnchorPane.leftAnchor="26.5" AnchorPane.rightAnchor="26.5" AnchorPane.topAnchor="32.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="245.66668167114258" minWidth="10.0" prefWidth="213.86667861938477" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="50.133314514160155" minHeight="10.0" prefHeight="50.133314514160155" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="68.26669921875" minHeight="10.0" prefHeight="58.66668548583984" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Tip of the day" textFill="WHITE" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                           <font>
+                              <Font name="Arial" size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets left="30.0" />
+                           </padding>
+                        </Label>
+                        <Text fx:id="quoteLabel" fill="WHITE" fontSmoothingType="LCD" smooth="false" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="Lorem Ipsum is simply dummy text of the printing and typesetting industry." wrappingWidth="157.76927185058594" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="30.0" />
+                           </GridPane.margin>
+                        </Text>
+                     </children>
+                     <styleClass>
+                        <String fx:value="roundPane" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                  </GridPane>
+                  <GridPane layoutX="9.0" layoutY="205.0" prefHeight="114.0" prefWidth="129.0" style="-fx-background-color: FDFCFE;" stylesheets="@style.css">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <styleClass>
+                        <String fx:value="roundPane" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" prefWidth="49.0" text="45%" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                           <GridPane.margin>
+                              <Insets right="13.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font name="Arial Bold" size="19.0" />
+                           </font>
+                        </Label>
+                        <FontAwesomeIconView fill="#f2ff00" glyphName="EXCLAMATION_TRIANGLE" selectionEnd="0" selectionFill="#f2ff00" size="45" wrappingWidth="45.06665229797363" GridPane.valignment="CENTER">
+                           <GridPane.margin>
+                              <Insets left="7.0" />
+                           </GridPane.margin>
+                        </FontAwesomeIconView>
+                        <Label text="emission this week" textFill="#a9a9a9" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+                           <GridPane.margin>
+                              <Insets bottom="13.0" right="5.0" />
+                           </GridPane.margin>
+                        </Label>
+                     </children>
+                  </GridPane>
+                  <GridPane layoutX="150.0" layoutY="204.0" prefHeight="114.0" prefWidth="129.0" style="-fx-background-color: FDFCFE;" stylesheets="@style.css">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="87.0" minHeight="10.0" prefHeight="87.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="50.9999755859375" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <styleClass>
+                        <String fx:value="roundPane" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                     <children>
+                        <ProgressIndicator minHeight="-Infinity" minWidth="-Infinity" prefHeight="82.0" prefWidth="110.0" progress="0.75" style="-fx-progress-color: lightgreen;" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                        </ProgressIndicator>
+                        <Label text="next reward" textFill="DARKGRAY" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                     </children>
+                  </GridPane>
+                  <Button contentDisplay="TOP" layoutX="9.0" layoutY="340.0" mnemonicParsing="false" prefHeight="114.0" onAction="#onSettingsButtonAction" prefWidth="129.0" stylesheets="@style.css" text="settings" textFill="DARKGRAY">
+                     <styleClass>
+                        <String fx:value="roundPane" />
+                        <String fx:value="shadow" />
+                        <String fx:value="tile" />
+                     </styleClass>
+                     <graphic>
+                        <FontAwesomeIconView fill="#7b7b7b" glyphName="GEAR" size="80" />
+                     </graphic>
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button contentDisplay="TOP" layoutX="150.0" layoutY="340.0" mnemonicParsing="false" prefHeight="114.0" prefWidth="129.0" stylesheets="@style.css" text="rewards" textFill="DARKGRAY" onAction="#onRewardsButtonAction">
+                     <styleClass>
+                        <String fx:value="roundPane" />
+                        <String fx:value="shadow" />
+                        <String fx:value="tile" />
+                     </styleClass>
+                     <graphic>
+                        <FontAwesomeIconView fill="#b500ff" glyphName="GIFT" size="80" />
+                     </graphic>
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="signOutButton" layoutX="252.0" layoutY="1.0" mnemonicParsing="false" onAction="#onSignOutButtonAction" prefHeight="27.0" prefWidth="14.0" stylesheets="@style.css">
+                     <graphic>
+                        <FontAwesomeIconView fill="#b4b4b4" glyphName="POWER_OFF" size="19" styleClass="power" />
+                     </graphic>
+                  </Button>
+                  <Button fx:id="goalsButton" contentDisplay="TOP" layoutX="9.0" layoutY="478.0" mnemonicParsing="false" onAction="#onGoalsButtonAction" prefHeight="114.0" prefWidth="129.0" stylesheets="@style.css" text="Goals" textFill="DARKGRAY">
+                     <styleClass>
+                        <String fx:value="roundPane" />
+                        <String fx:value="shadow" />
+                        <String fx:value="tile" />
+                     </styleClass>
+                     <graphic>
+                        <FontAwesomeIconView fill="#ffff00" glyphName="LIGHTBULB_ALT" size="80" />
+                     </graphic>
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <Button fx:id="ritToevoegenButton" layoutX="213.0" layoutY="447.0" mnemonicParsing="false" onAction="#onRitToevoegenButtonAction" prefHeight="58.0" prefWidth="58.0" stylesheets="@style.css">
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="PLUS" size="30" />
+         </graphic>
+         <styleClass>
+            <String fx:value="round" />
+            <String fx:value="toggle-btn" />
+         </styleClass>
+      </Button>
+   </children>
+</AnchorPane>
