@@ -4,14 +4,17 @@ import backend.Plane;
 import backend.WithPlate;
 import com.gluonhq.charm.glisten.control.TextField;
 import javafx.event.ActionEvent;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.layout.GridPane;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class ritToevoegenController {
+public class ritToevoegenController implements Initializable {
     public ToggleButton carBtn;
     public ToggleButton motorBtn;
     public ToggleButton bikeBtn;
@@ -25,20 +28,36 @@ public class ritToevoegenController {
     public Label labelUitstoot;
     public GridPane gridPaneAuto;
 
-
+public void setVisible(){
+    uitstoot.setText("");
+    startLocatie.setText("");
+    eindLocatie.setText("");
+    vervoerInfo.setText("");
+    startLocatie.setPromptText("Startlocatie");
+    eindLocatie.setPromptText("Bestemmingslocatie");
+    vervoerInfo.setPromptText("Kenteken");
+    startLocatie.setVisible(true);
+    eindLocatie.setVisible(true);
+    vervoerInfo.setVisible(true);
+    uitstoot.setVisible(true);
+    labelUitstoot.setVisible(true);
+}
+public void setInvisible(){
+    uitstoot.setText("");
+    startLocatie.setText("");
+    eindLocatie.setText("");
+    vervoerInfo.setText("");
+    startLocatie.setPromptText("Startlocatie");
+    eindLocatie.setPromptText("Bestemmingslocatie");
+    vervoerInfo.setPromptText("Kenteken");
+    startLocatie.setVisible(false);
+    eindLocatie.setVisible(false);
+    vervoerInfo.setVisible(false);
+    uitstoot.setVisible(true);
+    labelUitstoot.setVisible(true);
+}
     public void onCarBtnButtonAction(ActionEvent actionEvent) throws IOException {
-        uitstoot.setText("");
-        startLocatie.setText("");
-        eindLocatie.setText("");
-        vervoerInfo.setText("");
-        startLocatie.setPromptText("Startlocatie");
-        eindLocatie.setPromptText("Bestemmingslocatie");
-        vervoerInfo.setPromptText("Kenteken");
-        startLocatie.setVisible(true);
-        eindLocatie.setVisible(true);
-        vervoerInfo.setVisible(true);
-        uitstoot.setVisible(true);
-        labelUitstoot.setVisible(true);
+     setVisible();
     }
     @javafx.fxml.FXML
     public void onReturnButtonAction(ActionEvent actionEvent) throws IOException {
@@ -66,65 +85,29 @@ public class ritToevoegenController {
 
     @javafx.fxml.FXML
     public void onTrainBtnButtonAction(ActionEvent actionEvent) {
-        uitstoot.setText("");
-        startLocatie.setText("");
-        eindLocatie.setText("");
-        vervoerInfo.setText("");
-        startLocatie.setPromptText("Startlocatie");
-        eindLocatie.setPromptText("Bestemmingslocatie");
-        vervoerInfo.setPromptText("Kenteken");
-        startLocatie.setVisible(false);
-        eindLocatie.setVisible(false);
-        vervoerInfo.setVisible(false);
-        uitstoot.setVisible(true);
-        labelUitstoot.setVisible(true);
+     setInvisible();
     }
 
     @javafx.fxml.FXML
     public void onMotorBtnButtonAction(ActionEvent actionEvent) {
-        uitstoot.setText("");
-        startLocatie.setText("");
-        eindLocatie.setText("");
-        vervoerInfo.setText("");
-        startLocatie.setPromptText("Startlocatie");
-        eindLocatie.setPromptText("Bestemmingslocatie");
-        vervoerInfo.setPromptText("Kenteken");
-        startLocatie.setVisible(false);
-        eindLocatie.setVisible(false);
-        vervoerInfo.setVisible(false);
-        uitstoot.setVisible(true);
-        labelUitstoot.setVisible(true);
+setInvisible();
     }
 
     @javafx.fxml.FXML
     public void onAirplaneBtnButtonAction(ActionEvent actionEvent) {
-        uitstoot.setText("");
-        startLocatie.setText("");
-        eindLocatie.setText("");
-        vervoerInfo.setText("");
+        setVisible();
         startLocatie.setPromptText("Startlocatie (ITIA)");
         eindLocatie.setPromptText("Bestemmingslocatie (ITIA)");
         vervoerInfo.setPromptText("Vlucht Klasse");
-        startLocatie.setVisible(true);
-        eindLocatie.setVisible(true);
-        vervoerInfo.setVisible(true);
-        uitstoot.setVisible(true);
-        labelUitstoot.setVisible(true);
     }
 
     @javafx.fxml.FXML
     public void onBikeBtnButtonAction(ActionEvent actionEvent) {
-        uitstoot.setText("");
-        startLocatie.setText("");
-        eindLocatie.setText("");
-        vervoerInfo.setText("");
-        startLocatie.setPromptText("Startlocatie");
-        eindLocatie.setPromptText("Bestemmingslocatie");
-        vervoerInfo.setPromptText("Kenteken");
-        startLocatie.setVisible(false);
-        eindLocatie.setVisible(false);
-        vervoerInfo.setVisible(false);
-        uitstoot.setVisible(true);
-        labelUitstoot.setVisible(true);
+      setInvisible();
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        setInvisible();
     }
 }
