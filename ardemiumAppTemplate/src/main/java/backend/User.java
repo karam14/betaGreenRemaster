@@ -15,7 +15,7 @@ public class User {
     //    public ArrayList<Ride> rides;
 
 
-    public User(int USERID, boolean admin, String email, String password, String name, String phone,int points, Integer[] goals) {
+    public User(int USERID, boolean admin) {
         this.email = email;
         this.admin = admin;
         this.password = password;
